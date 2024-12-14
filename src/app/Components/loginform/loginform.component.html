@@ -1,0 +1,68 @@
+<section class="login__main__container">
+    <div class="wrapper">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <h2>Welcome back!</h2>
+        <p class="subheading">Welcome back you've been missed!</p>
+  
+        <!-- Email Field -->
+        <div class="input-field">
+          <input
+            type="text"
+            formControlName="email"
+            placeholder="Enter your email"
+            required
+          />
+          <label>Enter your email</label>
+        </div>
+        <div
+          *ngIf="
+            loginForm.get('email')?.invalid && loginForm.get('email')?.touched
+          "
+          class="error"
+        >
+          <p *ngIf="loginForm.get('email')?.errors?.['required']">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Exclamation_Circle_Red.svg/2048px-Exclamation_Circle_Red.svg.png" alt="error__icon" class="required__error__icon" />  Email adddress is required.
+          </p>
+          <p *ngIf="loginForm.get('email')?.errors?.['email']">
+            Please enter a valid email adddress
+          </p>
+        </div>
+  
+        <!-- Password Field -->
+        <div class="input-field">
+          <input type="password" formControlName="password" required />
+          <label>Enter your password</label>
+        </div>
+        <div
+          *ngIf="
+            loginForm.get('password')?.invalid &&
+            loginForm.get('password')?.touched
+          "
+          class="error"
+        >
+          <p *ngIf="loginForm.get('password')?.errors?.['required']">
+            Please enter Password
+          </p>
+          <p *ngIf="loginForm.get('password')?.errors?.['minlength']">
+            Password must be at least 6 characters
+          </p>
+        </div>
+  
+        <!-- Remember Me & Forgot Password -->
+        <div class="forget">
+          <label for="remember">
+            <input type="checkbox" id="remember" />
+            <p>Remember me</p>
+          </label>
+          <a href="#">Forgot password?</a>
+        </div>
+  
+        <!-- Submit Button -->
+        <button type="submit" [disabled]="loginForm.invalid">Log In</button>
+        <div class="register">
+          <p>Don't have an account? <a href="#">Register</a></p>
+        </div>
+      </form>
+    </div>
+  </section>
+  
