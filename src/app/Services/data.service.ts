@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { inject } from '@angular/core/testing';
 import { Observable } from 'rxjs';
+import { ApiResponse, Doctor } from '../model/apiResponse.model';
 
 @Injectable({
   providedIn: 'root'
@@ -8,10 +10,12 @@ import { Observable } from 'rxjs';
 export class DataService {
   constructor(private http: HttpClient) { }
 
-  apiURL = 'https://jsonplaceholder.typicode.com/users'
+  // apiURL = 'http://docapi.brokersaathi.co.in/api/User/GetAllDoctorList'
+  
+  apiURL = '/api/User/GetAllDoctorList';  // using the local proxy path
 
-  getUsers(): Observable<any[]>{
-    return this.http.get<any[]>(this.apiURL)
+  getAllDoctors(): Observable<ApiResponse<Doctor[]>>{
+    return this.http.get<ApiResponse<Doctor[]>>(this.apiURL)
   }
 
 }
