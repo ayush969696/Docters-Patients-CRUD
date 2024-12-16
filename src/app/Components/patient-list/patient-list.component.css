@@ -36,7 +36,7 @@
   }
   
   .search__bar{
-    width: 22%;
+    width: 23%;
     margin: 10px 20px;
     border-radius: 50px;
     background-color:#f4f6fa;
@@ -84,6 +84,7 @@
   
   .table__header {
     background-color: #f4f6fa;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
     
   }
   

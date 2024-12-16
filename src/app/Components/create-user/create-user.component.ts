@@ -11,13 +11,13 @@ import { DataService } from '../../Services/data.service';
   templateUrl: './create-user.component.html',
   styleUrl: './create-user.component.css'
 })
-export class CreateUserComponent implements OnInit {
+export class CreateUserComponent {
   userForm: FormGroup;
 
   userDataService = inject(DataService);
 
-  isDropdownOpen: { [key: number]: boolean } = {};
-
+  dropdownIndex: number | null = null;
+  
   constructor(private fb: FormBuilder) {
     this.userForm = this.fb.group({
       userName: ['', Validators.required],
@@ -26,10 +26,8 @@ export class CreateUserComponent implements OnInit {
       password: ['', Validators.required]
     });
   }
-  ngOnInit(): void {
-  }
 
-  onSubmit(): void {
+  onSubmit(){
     if (this.userForm.valid) {
       alert("Data Submited!")
 
@@ -42,7 +40,7 @@ export class CreateUserComponent implements OnInit {
   }
 
   toggleDropdown(index: number): void {
-    this.isDropdownOpen[index] = !this.isDropdownOpen[index];
+
   }
   
   onEdit(index: number): void {
@@ -58,7 +56,7 @@ export class CreateUserComponent implements OnInit {
   }
 
   closeDropdown(index: number): void {
-    this.isDropdownOpen[index] = false;
+
   }
   
 }

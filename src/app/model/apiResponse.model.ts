@@ -1,4 +1,4 @@
-export interface Doctor {
+export interface apiData {
     slNo: number;
     userId: number;
     clinicName: string;
@@ -23,7 +23,7 @@ export interface Doctor {
     updatedOn: string;
   }
   
-  export interface ApiResponse<T> {
+  export interface ApiResponse<T> {  // generic type parameter
     ok: boolean;
     message: string;
     data: T;

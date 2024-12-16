@@ -112,30 +112,43 @@
             </td>
             <td class="table__cell">1234567890</td>
             <td class="table__cell main__cell">Manager</td>
-            <td class="table__cell" (click)="$event.stopPropagation()">
-              <div class="action__container">
-                <button
-                  class="action__button"
-                  (click)="toggleDropdown(1)"    
-                >
+
+            <td class="table__cell">
+            <!-- Action Icon -->
+            <div class="action__container">
+              <button class="action__button" (click)="toggleDropdown(0)">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/7066/7066144.png"
+                  alt="action__icon"
+                  class="table__action__icon"
+                />
+              </button>
+
+              <!-- Edit & DElete -->
+              <div
+                class="dropdown__menu"
+                *ngIf="dropdownIndex === 0"
+                (click)="$event.stopPropagation()"
+              >
+                <button class="dropdown__item" (click)="onEdit(0)">
                   <img
-                    src="https://cdn-icons-png.flaticon.com/512/7066/7066144.png"
-                    alt="action__icon"
-                    class="table__action__icon"
+                    src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png"
+                    alt="edit-icon"
+                    class="dropdown__icon"
                   />
+                  Edit
                 </button>
-            
-                <!-- Dropdown Menu -->
-                <div
-                  *ngIf="isDropdownOpen[1]"
-                  class="dropdown__menu"
-                >
-                  <button (click)="onEdit(1)"> 
-                    Edit</button>
-                  <button (click)="onDelete(1)">Delete</button>
-                </div>
+                <button class="dropdown__item" (click)="onDelete(0)">
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/1214/1214428.png"
+                    alt="delete-icon"
+                    class="dropdown__icon"
+                  />
+                  Delete
+                </button>
               </div>
-            </td>
+            </div>
+          </td>
             
           </tr>
 
