@@ -10,7 +10,6 @@ import { Component } from '@angular/core';
 export class TopNavbarComponent {
 
   logout() {
-    // Perform logout operation
     console.log('Logging out');
   }
 }
