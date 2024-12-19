@@ -19,8 +19,7 @@ export class DocterListComponent implements OnInit {
 
   doctorService = inject(DataService); 
 
-
-  ngOnInit(): void {
+ ngOnInit(): void {
     this.fetchDoctersData();
   }
 
@@ -47,11 +46,12 @@ export class DocterListComponent implements OnInit {
       }
     )
   }
-
+  
 
   toggleDropdown(index: number) {
     this.dropdownIndex = this.dropdownIndex === index ? null : index;
   }
+
 
   onEdit(user: any) {
     console.log('Edit user:', user);

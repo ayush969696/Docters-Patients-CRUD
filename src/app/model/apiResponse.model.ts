@@ -21,7 +21,7 @@ export interface apiData {
     isActive: boolean;
     createdOn: string;
     updatedOn: string;
-  }
+  } 
   
   export interface ApiResponse<T> {  // generic type parameter
     ok: boolean;

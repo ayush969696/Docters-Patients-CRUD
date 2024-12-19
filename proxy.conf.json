@@ -1,6 +1,6 @@
 {
     "/api": {
-      "target": "http://docapi.brokersaathi.co.in",  
+      "target": "https://uatapi.brokersaathi.in",   
       "secure": false,
       "changeOrigin": true,
       "logLevel": "debug"
