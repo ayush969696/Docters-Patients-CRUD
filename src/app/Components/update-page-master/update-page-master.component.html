@@ -1,1 +1,55 @@
-<p>update-page-master works!</p>
+<div class="edit__page__master__container">
+  <form [formGroup]="editPageMasterForm" (ngSubmit)="onSubmit()" class="edit__page__master__form">
+    <h1 class="edit__page__master__title">Edit Page Master</h1>
+
+    <div class="input__fields__grid">
+      <div class="input__field">
+        <label for="pageName" class="input__label">Page Name</label>
+        <input
+          id="pageName"
+          formControlName="pageName"
+          type="text"
+          required
+          class="input__text"
+          placeholder="Enter Page Name"
+        />
+      </div>
+
+      <div class="input__field">
+        <label for="pageSlug" class="input__label">Page Slug</label>
+        <input
+          id="pageSlug"
+          formControlName="pageSlug"
+          type="text"
+          required
+          class="input__text"
+          placeholder="Enter Page Slug"
+        />
+      </div>
+
+      <div class="input__field">
+        <label for="createdByName" class="input__label">Creator's Name</label>
+        <input
+          id="createdByName"
+          formControlName="createdByName"
+          type="text"
+          required
+          class="input__text"
+          placeholder="Enter Creator's Display Name"
+        />
+      </div>
+
+      <div class="input__field__isActive">
+        <label for="isActive" class="input__label">Is Active</label>
+        <input id="isActive" formControlName="isActive" type="checkbox" class="input__checkbox" />
+      </div>
+
+    </div>
+    
+
+    <div class="buttons__container">
+      <button type="submit" class="submit__button">Update</button>
+      <button type="button" (click)="router.navigate(['/page-master-api'])" class="cancel__button">Cancel</button>
+    </div>
+  </form>
+</div>

@@ -32,10 +32,10 @@
         <thead>
           <tr class="table__header">
             <!-- <th class="table__header__cell">S. NO</th> -->
+            <th class="table__header__cell">SR.NO</th>
             <th class="table__header__cell">Page Name</th>
             <th class="table__header__cell">Page Slug </th>
             <th class="table__header__cell">created By</th>
-            <th class="table__header__cell">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -43,51 +43,15 @@
             class="table__row"
             *ngFor="let user of filteredUsers; let i = index"
           >
-            <!-- <td class="table__cell">
+            <td class="table__cell">
               <p class="main__cell">{{ i+1 }}</p>
-            </td> -->
+            </td>
             <td class="table__cell">
               <p class="main__cell">{{ user.pagename }}</p>
               <p>Page Master ID : {{ user.pageMasterId }}</p>
             </td>
             <td class="table__cell">{{ user.pageSlug }}</td>
             <td class="table__cell main__cell">{{ user.createdByName }}</td>
-            <td class="table__cell">
-              <!-- Action Icon -->
-              <div class="action__container">
-                <button class="action__button" (click)="toggleDropdown(i)">
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/7066/7066144.png"
-                    alt="action__icon"
-                    class="table__action__icon"
-                  />
-                </button>
-  
-                <!-- Edit & DElete -->
-                <div
-                  class="dropdown__menu"
-                  *ngIf="dropdownIndex === i"
-                  (click)="$event.stopPropagation()"
-                >
-                  <button class="dropdown__item" (click)="onEdit(user)">
-                    <img
-                      src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png"
-                      alt="edit-icon"
-                      class="dropdown__icon"
-                    />
-                    Edit
-                  </button>
-                  <button class="dropdown__item" (click)="onDelete(user)">
-                    <img
-                      src="https://cdn-icons-png.flaticon.com/512/1214/1214428.png"
-                      alt="delete-icon"
-                      class="dropdown__icon"
-                    />
-                    Delete
-                  </button>
-                </div>
-              </div>
-            </td>
           </tr>
         </tbody>
       </table>

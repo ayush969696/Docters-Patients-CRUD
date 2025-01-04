@@ -6,6 +6,7 @@ import { DocterComponent } from './Components/docter/docter.component';
 import { GetAllPageMasterlistComponent } from './Components/get-all-page-masterlist/get-all-page-masterlist.component';
 import { LoginformComponent } from './Components/loginform/loginform.component';
 import { PatientListComponent } from './Components/patient-list/patient-list.component';
+import { UpdatePageMasterComponent } from './Components/update-page-master/update-page-master.component';
 
 export const routes: Routes = [
        { path: "login", component: LoginformComponent},
@@ -14,6 +15,7 @@ export const routes: Routes = [
        { path: "patient-list", component: PatientListComponent},
        { path: "page-master-api", component: GetAllPageMasterlistComponent},
        { path: "create-page-master", component: CreatePageMasterComponent},
+       { path: 'update-page-master/edit/:id', component: UpdatePageMasterComponent},
 
 
 ];

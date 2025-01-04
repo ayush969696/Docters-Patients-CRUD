@@ -1,16 +1,27 @@
 <div class="sidebar__container">
   <a class="sidebar__logo" href="#">
-    <img src="https://brokersaathi.com/assets/images/brokersaathi-logo.png" alt="logo-img" class="sidebar__logo-img">
+    <img
+      src="https://brokersaathi.com/assets/images/brokersaathi-logo.png"
+      alt="logo-img"
+      class="sidebar__logo-img"
+    />
   </a>
 
   <div class="sidebar__nav">
     <div class="sidebar__section">
-      
       <!-- Dashboard -->
       <div class="dashboard">
         <a class="sidebar__link" routerLink="create-page-master">
           <i class="text-white pi pi-home text-xl"></i>
           <span class="dashboard__text">Dashboard</span>
+        </a>
+      </div>
+
+      <!-- Show Page Master List -->
+      <div class="user__container">
+        <a class="sidebar__link" routerLink="page-master-api">
+          <i class="text-white pi pi-chart-bar text-xl"></i>
+          <span class="dashboard__text">Master Page List</span>
         </a>
       </div>
 
@@ -30,14 +41,13 @@
         </a>
       </div>
 
-      <!-- Show Page Master List -->
+      <!-- Show Patient List -->
       <div class="user__container">
         <a class="sidebar__link" routerLink="patient-list">
           <i class="text-white pi pi-users text-xl"></i>
           <span class="dashboard__text">Patient List</span>
         </a>
       </div>
-
     </div>
   </div>
 
@@ -58,5 +68,4 @@
     <i class="text-white pi pi-sign-out text-lg"></i>
     <span class="footer__text">Sign Out</span>
   </a>
-  
 </div>

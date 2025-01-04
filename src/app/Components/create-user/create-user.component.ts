@@ -44,8 +44,6 @@ export class CreateUserComponent {
   }
   
   onEdit(index: number): void {
-    console.log('Edit clicked for row:', index);
-
     this.closeDropdown(index);
   }
 

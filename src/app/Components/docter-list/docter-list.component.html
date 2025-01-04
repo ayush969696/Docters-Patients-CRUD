@@ -69,7 +69,7 @@
                 *ngIf="dropdownIndex === i"
                 (click)="$event.stopPropagation()"
               >
-                <button class="dropdown__item" (click)="onEdit(user)">
+                <button class="dropdown__item" (click)="onEdit(i)">
                   <img
                     src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png"
                     alt="edit-icon"
@@ -77,7 +77,7 @@
                   />
                   Edit
                 </button>
-                <button class="dropdown__item" (click)="onDelete(user)">
+                <button class="dropdown__item" (click)="onDelete(i)">
                   <img
                     src="https://cdn-icons-png.flaticon.com/512/1214/1214428.png"
                     alt="delete-icon"

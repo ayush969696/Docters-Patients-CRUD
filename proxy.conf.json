@@ -1,9 +1,8 @@
 {
-    "/api": {
-      "target": "https://uatapi.brokersaathi.in",   
-      "secure": false,
-      "changeOrigin": true,
-      "logLevel": "debug"
-    }
+  "/api": {
+    "target": "https://uatapi.brokersaathi.in",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
   }
-  
+}
